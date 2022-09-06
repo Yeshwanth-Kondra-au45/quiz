@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+    <script src="./main.js" defer></script>
+</head>
+<body class="bg-secondary">
+    <div class="container">
+        <div class="row">
+            <h1 class="display-4 text-center col-12">Learning the JS properly: Project #1 - Dynamic Quiz</h1>
+            <div class="card col-12">
+                <div class="card-header"></div>
+                <div class="card-body bg-info" id="Main-box">
+                  <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Select Category</label>
+                    <select class="form-select" id="choosen">
+                      <option selected id="selected">Choose...</option>
+                      <option value="1" id="Knowledge">General Knowledge</option>
+                      <option value="2" id="Science">Science and Nature</option>
+                      <option value="3" id="Computer">Science: Computer</option>
+                      <option value="4" id="Mathematics">Science: Mathematics</option>
+                      <option value="5" id="Mythology">Mythology</option>
+                      <option value="6" id="Sports">Sports</option>
+                      <option value="7" id="Geography">Geography</option>
+                      <option value="8" id="Celebrities">Celebrities</option>
+                    </select>
+                  </div>
+                  <h5 class="card-title display-4 text-center" id="question-number">Question 1</h5>
+                  <span class="display-5 fs-2">Question:</span>
+                  <p class="card-text display-5 fs-3" id="question-text">
+                    <!-- from the server -->
+                  </p>
+                  <div class="p-3 fs-4">
+                    <div class="form-check">
+                        <input class="form-check-input text-start" type="radio" name="flexRadioDefault" id="option1">
+                        <label class="form-check-label" for="option1" id="op1">
+                          ------
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="option2">
+                        <label class="form-check-label" for="option2" id="op2">
+                          ------
+                        </label>
+                      </div><div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="option3">
+                        <label class="form-check-label" for="option3" id="op3">
+                          ------
+                        </label>
+                      </div><div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="option4">
+                        <label class="form-check-label" for="option4" id="op4">
+                          ------
+                        </label>
+                      </div>
+                  </div>
+                  <button class="btn btn-outline-dark" id="submit-next"> SUBMIT AND NEXT</button>
+                  <button onClick="window.location.reload();" class="btn btn-outline-dark "id="reload">Start Over</button>
+                </div>
+                <div class="card-footer text-muted text-end ">
+                  <span class="display-5 fs-5 text-center fw-bold">Instructions :You must select the category first.</span><br>
+                  <span class="display-5 fs-5 text-center fw-bold">You can answer only once to a question.</span>
+                  <span class="display-5 fs-5 text-center fw-bold">The result will be displayed at the end of Quiz.</span><br>
+                  <span class="display-5 fs-5 text-center fw-bold">Total questions are 10.</span><br>
+                  <a href="https://opentdb.com/api_config.php" target="_blank">Go to API</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</body>
+</html>
